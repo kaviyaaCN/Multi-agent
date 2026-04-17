@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+.env.local
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Project Data & Artifacts
+data/documents/
+data/faiss_index/
+*.pptx
+*.docx
+
+# Logs
+logs/
+*.log
+
+# IDEs and System
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
