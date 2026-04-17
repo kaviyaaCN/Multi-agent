@@ -220,12 +220,12 @@ header { background: transparent !important; }
     margin-bottom: .3rem;
     font-size: .85rem;
 }
-.pipeline-step.done    { background: rgba(16,185,129,.1); color: #6ee7b7; }
-.pipeline-step.active  { background: rgba(124,58,237,.15); color: var(--accent-light); }
-.pipeline-step.pending { color: var(--text-secondary); }
+.pipeline-step.done    { background: rgba(16,185,129,.15); color: #059669; font-weight: 500; }
+.pipeline-step.active  { background: rgba(109,40,217,.15); color: #6d28d9; font-weight: 600; }
+.pipeline-step.pending { color: var(--text-secondary); font-weight: 500; }
 
 /* ── Buttons ── */
-.stButton > button {
+.stButton > button, .stDownloadButton > button {
     background: linear-gradient(135deg, var(--accent), #6d28d9) !important;
     color: white !important;
     border: none !important;
@@ -235,11 +235,11 @@ header { background: transparent !important; }
     padding: .5rem 1.2rem !important;
     transition: opacity .2s, transform .1s !important;
 }
-.stButton > button:hover { opacity: .88 !important; transform: translateY(-1px) !important; }
-.stButton > button:active { transform: translateY(0) !important; }
+.stButton > button:hover, .stDownloadButton > button:hover { opacity: .88 !important; transform: translateY(-1px) !important; }
+.stButton > button:active, .stDownloadButton > button:active { transform: translateY(0) !important; }
 
 /* Outline button variant */
-div[data-testid*="secondary"] > .stButton > button {
+div[data-testid*="secondary"] > .stButton > button, div[data-testid*="secondary"] > .stDownloadButton > button {
     background: transparent !important;
     border: 1px solid var(--border) !important;
     color: var(--text-primary) !important;
