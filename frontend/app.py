@@ -3,7 +3,7 @@ frontend/app.py
 ===============
 Multi-Agent AI Academic Project Assistant — Streamlit Frontend
 ==============================================================
-A premium, dark-themed UI organized as a guided multi-step workflow.
+A premium, light-themed UI organized as a guided multi-step workflow.
 Each step corresponds to one agent in the pipeline.
 """
 
@@ -38,20 +38,20 @@ st.markdown("""
 
 /* ── Root variables ── */
 :root {
-    --bg-primary:   #0d1117;
-    --bg-secondary: #161b22;
-    --bg-card:      #1c2128;
-    --bg-hover:     #21262d;
-    --accent:       #7c3aed;
-    --accent-light: #a78bfa;
-    --accent-glow:  rgba(124, 58, 237, 0.3);
-    --green:        #10b981;
-    --amber:        #f59e0b;
-    --red:          #ef4444;
-    --blue:         #3b82f6;
-    --text-primary:   #e6edf3;
-    --text-secondary: #8b949e;
-    --border:         #30363d;
+    --bg-primary:   #f9fafb;
+    --bg-secondary: #ffffff;
+    --bg-card:      #ffffff;
+    --bg-hover:     #f3f4f6;
+    --accent:       #6d28d9;
+    --accent-light: #8b5cf6;
+    --accent-glow:  rgba(109, 40, 217, 0.2);
+    --green:        #059669;
+    --amber:        #d97706;
+    --red:          #dc2626;
+    --blue:         #2563eb;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --border:         #e5e7eb;
     --radius:         12px;
     --radius-lg:      16px;
 }
@@ -156,14 +156,14 @@ header { background: transparent !important; }
 
 /* ── Code block ── */
 .code-block {
-    background: #010409;
+    background: #f1f5f9;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 1rem;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.78rem;
     overflow-x: auto;
-    color: #e6edf3;
+    color: #0f172a;
     max-height: 500px;
     overflow-y: auto;
 }
@@ -185,10 +185,10 @@ header { background: transparent !important; }
 
 /* ── Slide card (Gamma-like Theme) ── */
 .slide-card {
-    background: linear-gradient(135deg, #111827 0%, #171026 100%);
-    border: 1px solid #374151;
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     margin-bottom: 1rem;
     position: relative;
@@ -197,19 +197,19 @@ header { background: transparent !important; }
 }
 .slide-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(181, 113, 255, 0.15);
-    border-color: #581c87;
+    box-shadow: 0 8px 24px rgba(109, 40, 217, 0.15);
+    border-color: #8b5cf6;
 }
 .slide-card::before {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 6px; height: 100%;
-    background: linear-gradient(to bottom, #b571ff, #3b82f6);
+    background: linear-gradient(to bottom, #8b5cf6, #3b82f6);
 }
-.slide-num { font-size: .75rem; color: #a78bfa; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
-.slide-title { font-size: 1.25rem; font-weight: 800; color: #f3f4f6; margin: .5rem 0 .75rem; letter-spacing: -0.01em; }
-.slide-bullet { font-size: .9rem; color: #d1d5db; margin: .4rem 0; line-height: 1.4; display: flex; align-items: flex-start; }
-.slide-bullet::before { content: "❖ "; color: #8b5cf6; margin-right: 0.5rem; font-size: 0.8rem; padding-top: 0.1rem; }
+.slide-num { font-size: .75rem; color: #6d28d9; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+.slide-title { font-size: 1.25rem; font-weight: 800; color: #111827; margin: .5rem 0 .75rem; letter-spacing: -0.01em; }
+.slide-bullet { font-size: .9rem; color: #4b5563; margin: .4rem 0; line-height: 1.4; display: flex; align-items: flex-start; }
+.slide-bullet::before { content: "❖ "; color: #6d28d9; margin-right: 0.5rem; font-size: 0.8rem; padding-top: 0.1rem; }
 
 /* ── Progress indicator ── */
 .pipeline-step {
